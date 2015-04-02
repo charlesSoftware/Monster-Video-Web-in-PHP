@@ -1,0 +1,113 @@
+html, body, div, span,applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+html,body{background:#fff;}
+body{font:12px/1.5em "\5b8b\4f53","Arial Narrow"; color:#313131;height:100%;background:url(images/page_bg.png) repeat;}
+a { color:#024978;text-decoration:none;outline:none;cursor:pointer;}
+a:hover { text-decoration:none;background:#0B89BF;color:#FFFFFF; }
+li{list-style-type:none;}
+img{border-style: none;}
+fieldset{border-style: none }
+label,button{cursor: pointer;}
+select,input,textarea{font-size:12px;line-height:1.2em;}
+table{border-collapse: collapse;border-style: none;}
+td{padding: 0;border:0;font-size:12px;line-height:1.5em;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+/*all*/
+.mykk_A, .mykk_A_on, .topsearch button, .topchannel, .topchannel li, .topsearch input{background:url(images/topchannel.png) no-repeat 0 0;}
+.tipsbox .top, .boxside, .useroper , .link_dropdetail, .xgzx li, .tab_tt h3{background:url(images/sprite.png) no-repeat 0 0;}
+.list-pager a,.list-pager span,.list-pager strong{background:url(images/sprite_list.png) no-repeat 0 0;}
+.icon, .icon:hover{background:url(images/icon_sp.png) no-repeat; overflow:hidden;}
+.btn, .btn:hover{background:url(images/btn_sp.jpg) repeat-x;}
+/*top*/
+.topchannel {height:30px;background-repeat:repeat-x;border-left:solid #e2e2e2 1px;border-right:solid #e2e2e2 1px;}
+.topchannel ul {float:left;padding:7px 0 0 10px;}
+.topchannel li {float:left;display:inline;background-position:-190px -83px;padding:0 8px;}
+.topchannel .more {background:url(images/0516_sprite.png) no-repeat -120px 4px;padding-right:10px;}
+.topchannel_con {width:970px;padding:0 0;margin:0 auto;overflow:hidden;}
+.logo {float:left;display:block;width:90px;height:22px;margin-top:4px;}
+.topsearch {float:right;width:190px;margin-top:3px;}
+.topsearch input {float:left;width:115px;height:20px;background-position:0 -39px;padding:0 0 0 20px;margin-top:1px;border:solid #d5d5d5 1px;border-right:none;line-height:14px;>line-height:22px;}
+.topsearch button {float:right;display:block;width:54px;height:23px;background-position:0 -60px;border:none;text-indent:-9999px;}
+.toplogon {float:right;display:inline;margin:6px 5px 0 0;color:#d4d4d4;}
+.toplogon a {margin:0 3px;}
+/*footer*/
+.footer {width:970px;margin:0 auto;overflow:hidden;zoom:1;}
+.footer {height:80px;padding-top:15px;color:#898888;text-align:center;clear:both;}
+.footer a {color:#898888;}
+.footer .f-nav {width:1002px;height:20px;color:#C9C9C9;text-align:center;}
+.footer .f-nav a {margin:0 8px;color:#333;}
+.footer .copyright {width:1002px;height:44px;font-family:"Arial";line-height:22px;text-align:center;}
+/*base*/
+.wp{width:970px;margin:0 auto;position:relative;}
+/*film_review*/
+.film_review{background:#FAFAFA;margin-top:10px;}
+.film_review .l_tit{height:54px;line-height:54px;border-bottom:1px solid #E0E0E0;padding:0 35px;position:relative;margin-bottom:22px;}
+.film_review h1 .num{color:#A9A9A9;font-size:18px;font-family:Microsoft Yahei;font-style:normal;}
+.film_review .main{width:920px;float:left;overflow:hidden;}
+.film_review .box2{padding:25px;overflow:hidden;zoom:1;}
+.film_review h1{color:#484747;font-size:24px;font-family:Microsoft Yahei;}
+/*filmHotList*/
+.filmHotList .tit{height:30px;line-height:24px;}
+.filmHotList .tit .more{font-size:14px;color:#484747;font-family:Microsoft Yahei;float:right;}
+.filmHotList .tit .more:hover{color:#fff;}
+.filmHotList h1{float:left;margin-right:28px;}
+.filmHotList .tabBox{float:left;}
+.filmHotList .function{text-align:right;position:relative;zoom:1;color:#999999;}
+.filmHotList .function .data{position:absolute;left:0;top:0;}
+.filmHotList .function em{margin-left:10px;}
+.filmHotList li{padding:19px 0;border-bottom:1px dashed #D9DBDE;height:auto!important;height:140px;min-height:140px;float:left;width:440px;margin-right:20px;overflow:hidden;}
+.filmHotList .pic img{float:left;}
+.filmHotList .txtbox{margin-left:120px;line-height:21px;}
+.filmHotList h3{height:21px;overflow:hidden;font-size:14px;margin-bottom:5px;}
+.filmHotList .de{color:#484747;margin-bottom:5px;word-wrap:break-word;display:block;height:60px;}
+.filmHotList .critic{height:20px;margin:8px 0;color:#AAAAAA;}
+.filmHotList .critic a, .filmHotList .critic span{float:left;margin-right:5px;}
+.filmHotList .critic img{width:20px;height:20px;float:left;}
+.filmHotList .function{text-align:right;position:relative;zoom:1;color:#999999;}
+.filmHotList .function .data{position:absolute;left:0;top:0;}
+.filmHotList .function em{margin-left:10px;font-style:normal;}
+.filmHotList .list-pager{padding:20px 0;}
+/**/
+.mod{border:1px solid #D1D1D1;border-top-color:#fff;border-bottom:none;zoom:1;background:#FAFAFA;border-bottom:1px solid #D1D1D1;}
+/*list-pager*/
+.list-pager {clear:both;padding:20px 10px;text-align:center;font-family:"Simsun";}
+.list-pager a,.list-pager strong {background-position:-72px -56px;border:1px solid #c3c3c3;display:inline-block;height:18px;line-height:18px;margin:0 3px 0 1px;padding:0 8px;text-align:center;vertical-align:middle;}
+.list-pager span{background-position:-72px -78px;border:none;color:#fff;padding:1px 9px;vertical-align:middle;display:inline-block;font-weight:bold;}
+.list-pager a:hover {background-position:-72px -78px;color:#fff;text-decoration:none;border-color:#058cbe;}
+/**/
+.main_672{width:670px;float:left;overflow:hidden;}
+/*film_review_list*/
+.film_review_list li{padding:20px 20px 20px 0;border-bottom:1px dashed #E8E8E8;zoom:1;}
+.film_review_list img{width:50px;height:50px;float:left;}
+.film_review_list .txtbox{margin-left:20px;color:#484747;}
+.film_review_list h3{height:20px;overflow:hidden;font-size:14px;color:#004978;}
+.film_review_list .createrInfo{color:#A0A0A0;height:18px;}
+.film_review_list .createrInfo a,.film_review_list .createrInfo em{float:left;}
+.film_review_list .function{text-align:right;position:relative;zoom:1;color:#999999;}
+.film_review_list .function .data{position:absolute;left:0;top:0;}
+.film_review_list .function em{margin-left:10px;font-style:normal;}
+.film_review_list .m_txt{padding:5px 0;word-wrap:break-word;}
+/*side*/
+.side_260{width:288px;float:right;margin-top:10px;}
+.side_260 .mod{background:#F3F3F3;border-bottom:1px solid #D1D1D1;}
+/*filmPartSide*/
+.filmPartSide{padding:16px 16px 25px;}
+.filmPartSide .topList li{height:38px;line-height:38px;padding-left:27px;font-size:14px;position:relative;color:#929191;border-bottom:1px solid #D7D7D7;border-top:1px solid #fff;}
+.filmPartSide .topList .return{border-top:none;}
+.filmPartSide .topList b{position:absolute;left:2px;top:12px;}
+.filmPartSide .return b{width:17px;height:14px;background-position:0 -1418px;}
+.filmPartSide .findAll b{width:16px;height:17px;background-position:0 -1441px;}
+.filmPartSide .sComment b{width:16px;height:16px;background-position:0 -1468px;}
+.filmPartSide h3{font-size:14px;border-top:1px solid #fff;padding:15px 0;}
+.filmPartSide .pic img{width:100px;height:140px;display:block;}
+.filmPartSide .scorebox{height:20px;padding:10px 0;}
+.filmPartSide .scorebox .score{font-size:20px;font-family:"Verdana";color:#F83D04;margin:0 3px;}
+.filmPartSide .scorebox .score em{font-size:14px;font-weight:bold;}
+.filmPartSide .scorebox .num{color:#676767;}
+.filmPartSide .movieDetail{line-height:21px;margin-bottom:10px;}
+.filmPartSide .movieDetail a{margin:0 2px;}
+.filmPartSide .movieDetail li{height:21px;overflow:hidden;}
+.filmPartSide .movieDetail em{font-style:normal;}
+.tosee{width:165px;height:35px;line-height:35px;color:#FDFFFF;font-size:14px;display:block;background-position:0 -598px;position:relative;text-indent:34px;}
+.tosee:hover{color:#FDFFFF;background-position:0 -633px;}
+.tosee b{width:22px;height:22px;background-position:0 -1272px;position:absolute; left:9px; top:7px;}
+.tosee:hover b{background-position:0 -1304px;}

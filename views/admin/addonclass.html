@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>扩展分类管理</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel='stylesheet' type='text/css' href='./views/css/admin_style.css'>
+<script language="JavaScript" charset="utf-8" type="text/javascript" src="./views/js/jquery.js"></script>
+<script language="JavaScript" charset="utf-8" type="text/javascript" src="./views/js/admin_all.js"></script>
+</head>
+<body>
+<notempty name="list">
+<table width="98%" border="0" cellpadding="4" cellspacing="1" class="table">
+<form action="?s=Admin/Addonclass/Update" method="post" id="gxform" name="gxform">
+<tr class="table_title">
+  <td colspan="8">扩展分类列表</td>
+</tr>
+<tr class="list_head ct">
+  <td width="60">编号</td>
+  <td colspan="2" >扩展分类名称</td>
+  <td width="70">顺序</td>
+  <td width="60">删除</td>
+</tr>
+<volist name="list" id="gxcms">
+<tr class="tr ct">
+<td class="td">{$gxcms.id}<input name="ids[]" type="checkbox" value="{$gxcms.id}" class="noborder" checked></td>
+<td class="td">{$gxcms.name}</td>
+<td class="td ct"><input name="names[{$gxcms.id}]" type="text" value="{$gxcms.name}" maxlength="50" class="input" style="text-align:center"></td>
+<td class="td"><input name="oids[{$gxcms.id}]" type="text" value="{$gxcms.oid}" size="3" maxlength="5" class="ct"></td>
+<td class="td"><a href="?s=Admin/Addonclass/Del/id/{$gxcms.id}" onClick="return confirm('确定删除该扩展分类吗?')">删除</a></td>
+</tr>
+</volist>
+<tr>
+<td colspan="8" class="tr"><input type="button" id="checkall" value="全/反选" class="bginput"> <input type="submit" value="批量修改" name="Submit" class="bginput"  onclick="gxform.action='?s=Admin/Addonclass/Update';"/>&nbsp;&nbsp;<input type="submit" value="批量删除" onClick="if(confirm('确定要删除吗?')){gxform.action='?s=Admin/Addonclass/Delall';}else{return false}" class="bginput"/></td>
+</tr>
+</form>
+</table>
+</notempty>
+<table width="98%" border="0" cellpadding="4" cellspacing="1" class="table">
+<form action="?s=Admin/Addonclass/Insert" method="post">
+<tr class="table_title">
+  <td colspan="2">添加扩展分类</td>
+</tr>        
+<tr class="tr">
+  <td width="100" >扩展分类名称:</td>
+  <td ><input name="name" type="text" maxlength="50" value="{$name}" style="width:200px"> *</td>
+</tr> 
+<tr class="tr">
+  <td >分类排序：</td>
+  <td ><input name="oid" type="text" value="{$oid}" maxlength="5" style="width:40px;text-align:center" title="越小越前面"></td>
+</tr>
+<tr class="tr">
+  <td colspan="2"><input class="bginput" type="submit" name="submit" value="提交"></td>
+</tr>
+</form>
+</table>
+<include file="footer" />
+</body>
+</html>

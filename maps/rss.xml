@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+<title>光线CMS</title> 
+<description>光线CMS</description> 
+<link>http://localhost/</link> 
+<language>zh-cn</language> 
+<docs>光线CMS</docs> 
+<generator>Rss Powered By http://localhost/</generator> 
+<image>
+<url>http://localhost/public/images/logo.gif</url> 
+</image>
+<item>
+<title>youtube_testww</title> 
+<link>http://localhost/?s=video/detail/id/2.html</link>
+<author>ww</author>
+<pubDate>2015-03-29 06:43:18</pubDate>
+<description><![CDATA["ww"]]></description> 
+</item><item>
+<title>test2e</title> 
+<link>http://localhost/?s=video/detail/id/3.html</link>
+<author>e</author>
+<pubDate>2015-03-29 06:42:41</pubDate>
+<description><![CDATA["e"]]></description> 
+</item></channel>
+</rss>

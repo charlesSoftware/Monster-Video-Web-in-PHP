@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>影片下载地址采集</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript" charset="utf-8" type="text/javascript" src="./views/js/jquery.js"></script>
+<link rel='stylesheet' type='text/css' href='./views/css/admin_style.css'>
+</head>
+<body>
+<table width="98%" border="0" cellpadding="5" cellspacing="1" class="table">
+<tr>
+  <td colspan="8" class="table_title"><span class="fl">共有{$count}部影片</td>
+</tr>
+<form action="?s=Admin/DownCollect/Collect" method="post" id="gxform" name="gxform">{__NOTOKEN__}
+<tr align="center" class="list_head">
+<td>编号</td>
+<td>视频名称</td>
+<td width="80">视频分类</td>
+<td width="90">时间</td>
+</tr>
+<volist name="list_video" id="gxcms">
+<tr class="tr" align="center">
+<td align="left" width="30"><input name='ids[]' type='checkbox' value='{$gxcms.id}' class="noborder" checked="checked">{$gxcms.id}</td>
+<td align="left" style="color:#999">{:get_color_title(get_replace_html($gxcms['title'],0,30),$gxcms['color'])}</td>
+<td class="td">{$gxcms.cname}</td>
+<td class="td">{$gxcms.addtime|date='Y-m-d',###}</td>
+</tr>
+</volist>
+<tr class="tr"><td colspan="8" class="pages">{$listpages}</td></tr>
+<tr class="tr"><td colspan="8"><input type="button" value="全选" class="bginput" onClick="checkinput('all');">&nbsp;&nbsp;<input type="button" value="反选" class="bginput" onClick="checkinput();">&nbsp;&nbsp;<input type="submit" value="采集所选" class="bginput" onClick="post(getjumpurl('ids','',''));" />&nbsp;&nbsp;<input type="submit" value="全部采集" class="bginput" onClick="post(getjumpurl('all','',''));" /></td>
+</tr>
+</form>
+</table>
+<script language="JavaScript" charset="utf-8" type="text/javascript">
+//获取跳转地址
+function getjumpurl($action,$cid,$day){
+	return '?s=Admin/DownCollect/Collect/fid/{$fid}/action/'+$action+'/vodids/{$vodids}/day/'+$day;
+}
+//全选与反选
+function checkinput($all){
+	if($all){
+		$("input[name='ids[]']").each(function(){
+				this.checked = true;
+		});		
+	}else{
+		$("input[name='ids[]']").each(function(){
+			if(this.checked == false)
+				this.checked = true;
+			else
+			   this.checked = false;
+		});		
+	}
+}
+//表单提交
+function post($url){
+	$('#gxform').attr('action',$url);
+	$('#gxform').submit();
+}
+</script>
+<include file="footer" />
+</body>
+</html>

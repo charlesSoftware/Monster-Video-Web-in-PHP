@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$webtitle}</title>
+<meta name="keywords" content="{$keywords}{$keywords}">
+<meta name="description" content="{$description}">
+<include file="system" />
+<link rel='stylesheet' type='text/css' href='{$webpath}css/play.css'>
+<link rel='stylesheet' type='text/css' href='{$webpath}css/header.css'>
+<script language="JavaScript" type="text/javascript" src="{$webpath}js/template.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var name='{$title}';
+	var num='{$playname}';
+	var url=window.location.href;
+	CheckAdd(name,'gxhis',url,num)
+});
+</script>
+</head>
+<body class="widemode">
+<include file="header" />
+<div class="histroydrop" id="history_container" style="top:-1000px;"></div>
+<div class="">
+	<div class="player_widebg" id="player_wide_bg">
+				<div class="player" id="player_container">
+                	{$player}
+				</div>
+	</div>
+</div>
+<div class="diversity diversity_white" id="diversityDiv">
+	<gt name="serial" value="0"><div id="dyTips" class="dybox_tips" style="display: none; "><strong>温馨提示:</strong><p>您确定要取消订阅《{$title}》吗?</p><div class="dybox_tips_btn"><a href="javascript:void(0)" onclick="DYData.doCancleDY();return false;">确定</a><a href="javascript:void(0)" onclick="DYData.$display('dyTips','none');">取消</a></div></div>
+	<div id="dyCancle" class="dybox dybox_2" style="display: none;"><span>已订阅</span><a href="javascript:void(0)" onclick="DYData.$display('dyTips','');return false;">取消订阅</a>|<a href="" target="_blank">管理我的订阅</a></div>
+	<div id="dyStat" class="dybox" style="display: none;"><span>正在处理中...</span></div>
+	<div id="dySubmit" class="dybox" style=""><a class="dybtn" href="javascript:void(0)" onclick="DYData.doSubmitDY();return false;">更新通知我</a>
+    	<span>(您订阅的影视,最新更新将会第一时间通知您)</span>
+    </div></gt>
+	<dl id="dl_subList" class="diversity_white_dl diversity_white_dl_dsj">
+    <gt name="serial" value="0"><dt style="display:;" id="dt_fenji">
+    <span>更新至第{$serial}集</span>
+	</dt></gt>
+    <dd><ul id="ul_subLabel" class="diversity_white_ul">
+    <gxfor name="playlist" id="video">
+            <li <eq name="video.playname" value="$playname">class="selected"</eq>><a href="{$video.playurl}" title="{$video.playname}">{$video.playname}</a></li>
+    </gxfor>
+    </ul></dd>
+    </dl>
+</div>
+<div class="wrapper">
+		<div class="main">		
+			<div class="box">
+				<div class="box_tt box_tt_tab2">
+					<h3><a id="tab_container_0" onmouseover="abSwitch('container',0,3,'on','')" target="_self" class="on">可能还喜欢</a></h3>
+				</div>
+				<div class="box_con" id="tabboxContent">
+					<div class="movList" id="List_container_0">
+						<div id="turn_x_marginId">
+							<ul class="imglist">
+                            <span id="hot_video" href="{$webpath}index.php?s=my/show/id/hot_video/cid/{$cid}/limit/6">Loading...</span>
+                            </ul><span class="bl"></span><span class="br"></span>
+ 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+<script>
+function spreadD()
+{
+	try{
+		var box=document.getElementById("djdzk_box");
+		if(box.style.height=="215px")
+		{
+			document.getElementById("spreadButton").innerHTML="收起";
+			document.getElementById("spreadButton").className="act act_close"
+			document.getElementById("spreadButtonUnder").style.display="";
+			try{
+				for(var t=0;t<15;t++){
+					var obj=document.getElementById("djdzk_pic_"+t);
+					if(obj.src!=obj.getAttribute('fsrc'))
+						obj.src=obj.getAttribute('fsrc')
+				}
+			}catch(e){}
+			box.style.height="430px";
+		}else{
+			document.getElementById("spreadButton").innerHTML="查看更多";
+			document.getElementById("spreadButton").className="act"
+			document.getElementById("spreadButtonUnder").style.display="none";
+			box.style.height="215px";
+		}
+	}catch(e){}
+}
+</script>
+<div class="box_tt djdzk"><h3>大家都在看</h3><a id="spreadButton" class="act" onclick="spreadD();return false">查看更多</a></div>
+	<div class="box_con">
+	<ul id="djdzk_box" class="movList movList_111x66" style="height:215px">
+    <span id="everyone_video" href="{$webpath}index.php?s=my/show/id/everyone_video/limit/10">Loading...</span>
+    </ul>
+<div class="box_tt"><a id="spreadButtonUnder" class="act act_close" onclick="spreadD();return false" style="display:none">收起</a></div>
+</div>
+			</div>
+			<a name="vod_comment" id="vod_comment" ></a>
+			<div>
+				<div class="box_comment box_comment_input" id="inputCbox">
+	<div class="box_comment_tt">
+		<h3>影片评论</h3>
+		<div class="box_comment_more" id="sendCm_more">(共<span id="com_count">0</span>条评论)</div>
+	</div>
+	<div class="commenttip" id="successBox" style="display:none">
+	</div><!--commenttip  END--><div class="box_con" id="List_sendCm_0">
+		<div class="inputcontain">
+			<textarea name="content" id="comment_content" rows="5" onfocus="ss=setInterval(sp,200)" onblur="clearInterval(ss)" maxlength="200" class="textarea"></textarea>
+			<div class="textarea_bar">
+				<span class="textarea_bar_error" id="errorS"></span><span class="textarea_bar_tip" id="tipS"></span>
+				<input id="comment_button" onclick="CommentPost();" class="textarea_bar_btn" type="button" value="发表评论" onmouseover="this.className='textarea_bar_btn textarea_bar_btn_hover'" onmouseout="this.className='textarea_bar_btn'" style="border:none;"/>
+				<p id="tipsS">还可以输入<span id="span">200</span>个字</p>
+			</div>
+		</div><!--inputcontain 输入 END-->
+		</form>
+	</div>
+	<div class="box_con" style="display:none" id="List_sendCm_1">
+	</div>
+		<div class="box_shortcomment" id="outerBoxS">
+			<div class="box_tt">
+				<h3>{$title}的评论</h3><span class="viewcomment">全部<span id="com_count">0</span>条</span>
+				<div class="tabcomment">
+					<a id="Tab_shortbox_0" title="最新评论" class="on" onclick="cmSwitch('shortbox',0,2,'on','')">最新评论</a><span>|</span><a id="Tab_shortbox_1" title="热门评论" onclick="cmSwitch('shortbox',1,2,'on','')">热门评论</a>
+				</div>
+				<a href="javascript://" onclick="document.getElementById('comment_content').focus();" title="我也要发评论" class="postcomment">我也要说两句</a>
+			</div>
+			<div class="box_con" id="List_shortbox_0">
+            <div id="Comments"></div>
+            </div>
+			<div class="box_con" id="List_shortbox_1" style="display:none;">
+            <div id="Comments2"></div>
+            </div>
+		</div><!--box  END-->
+</div>
+			</div><!--box  END-->
+		</div>
+		<div class="side">
+			<div class="box boxside">
+			<div class="box_tt nobg"></div>
+			<div class="starbox">
+               <div class="play-rating">
+					<include file="system_score" />
+               </div><!--ratebox  END-->
+			</div><!--starbox end-->
+				<div class="sharebox">
+					<div class="sharebox_div">
+						<span>一键分享:</span>
+						<!-- Button BEGIN -->
+						<div id="ckepop">
+							<a target="_blank" href="http://share.v.t.qq.com/index.php?c=share&a=index&url={:http_url()}&appkey=801082287&pic=&assname=ziyuan5&title={$title|urlencode}-{:urlencode('免费在线观看')}"><img src="/views/images/home/qq_t.png" /></a>
+                            <a target="_blank" href="http://service.t.sina.com.cn/share/share.php?url={:http_url()}&appkey=3994589670&title={$title|urlencode}-{:urlencode('免费在线观看')}&pic=&ralateUid=2519401067&searchPic=true"><img src="/views/images/home/sina.gif" /></a>
+                            <a target="_blank" href="http://share.renren.com/share/buttonshare.do?link={:http_url()}&title={$title|urlencode}-{:urlencode('免费在线观看')}"><img src="/views/images/home/share-tinybtn.png" /></a>
+                            <a target="_blank" href="http://www.kaixin001.com/repaste/share.php?rurl={:http_url()}&rcontent={$title|urlencode}-{:urlencode('免费在线观看')}{:http_url()}&rtitle={$title|urlencode}-{:urlencode('免费在线观看')}"><img src="/views/images/home/kaixin.gif" /></a>
+                            <a target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={:urlencode(http_url())}&title={$title|urlencode}-{:urlencode('免费在线观看')}&pics=&summary="><img src="/views/images/home/qz_logo.png" /></a>
+                            <a target="_blank" href="http://www.douban.com/recommend/?url={:http_url()}&title={$title|urlencode}-{:urlencode('免费在线观看')}"><img src="/views/images/home/douban.gif" /></a>
+                            <a target="_blank" href="http://tieba.baidu.com/i/sys/share?link={:http_url()}&type=video&title={$title|urlencode}{:urlencode('免费在线观看')}"><img src="/views/images/home/baidutieba.gif" /></a>
+						</div>
+						<!-- Button END -->
+					</div>
+					<div class="sharebox_div">
+						<span>关注官方微博:</span>
+						<div class="wbdiv"><iframe width="63" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0" src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=63&height=24&uid=2519401067&style=1&btn=light&dpc=1"></iframe></div>
+						<div class="wbdiv"><a href="http://t.qq.com/ziyuan5" title="关注本站的腾讯微博" target="_blank"><img src="{$webpath}images/txwb.png" alt="腾讯微博" title="关注本站的腾讯微博"></a></div>
+					</div>
+                    <p><a href="{$webpath}index.php?s=guestbook/lists/id/{$id}" target="_blank">影片出错反馈</a>|<a href="http://movie.douban.com/subject_search?search_text={$title}&cat=1002" target="_blank" title="{$title}的豆瓣影评">豆瓣影评</a></p>
+				</div><!--sharebox  END-->
+                <div class="box_con">
+<div class="movieDetail">
+	<strong class="movieDetail_tt"><a href="{$readurl}" title="{$title}">{$title}</a></strong>
+			<p><strong>上映:</strong><a href="{$webpath}index.php?s=video/lists/id/{$cid|get_pid}/year/{$year|default='未知'}" title="{$year|default='未知'}" target="_blank">{$year|default='未知'}</a></p>
+		<p><strong>播放:</strong><span>{$hits}</span></p>
+		<p><strong>导演:</strong><notempty name="director">{$director|get_actor_url}<else /><span>未知</span></notempty></p>
+		<p><strong>主演:</strong><notempty name="actor">{$actor|get_actor_url}<else /><span>未知</span></notempty></p>
+		<p><strong>地区:</strong><a href="{$webpath}index.php?s=video/lists/id/1/area/{$area|default='其它'}">{$area|default='其它'}</a></p>
+		<p><strong>类型:</strong><a href="{$showurl}" target="_blank" title="{$cname}">{$cname}</a></p>
+		<p><strong>语言:</strong><span>{$language|default='未知'}</span></p>
+		</div>
+</div>
+<div class="box_tt"><h3>剧情简介</h3></div>
+<div class="box_con box_con_movieinfo">
+	<p>{$content|get_replace_html=0,150,'utf-8',true}<a target="_blank" href="{$readurl}" title="{$title}剧情介绍">更多</a></p>
+</div>
+				<script type="text/javascript">
+					function switchTab(identify,index,count,cnon,cnout) {
+						 for(i=0;i<count;i++) {
+							 var CurTabObj = document.getElementById("Tab_"+identify+"_"+i) ;
+							 var CurListObj = document.getElementById("List_"+identify+"_"+i) ;
+							 if (i != index) {
+								 CurTabObj.className=cnout ;
+								 CurListObj.style.display="none" ;
+							 }
+						 }						
+						 document.getElementById("Tab_"+identify+"_"+index).className=cnon ;
+						 document.getElementById("List_"+identify+"_"+index).style.display="";
+					}
+				</script>
+				<div class="box_tt">
+					<h3>热播榜</h3>
+					<ul class="tabbox">
+						<li onmouseover="switchTab('rebo',0,4,'on','');" class="on" id="Tab_rebo_0">电影</li>
+						<li onmouseover="switchTab('rebo',1,4,'on','');" id="Tab_rebo_1">电视剧</li>
+						<li onmouseover="switchTab('rebo',2,4,'on','');" id="Tab_rebo_2">动漫</li>
+						<li onmouseover="switchTab('rebo',3,4,'on','');" id="Tab_rebo_3">综艺</li>						
+					</ul>
+				</div>
+                <div id="List_rebo_0" >				
+					<ol class="ranklist">
+                    <gxcms name="video" cid="1" limit="10" order="dayhits desc">
+						<lt name="i" value="4"><li class="top"><else /><li></eq></lt><em><eq name="i" value="10">{$i}<else/>0{$i}</eq></em><p><a href="{$video.readurl}" title="{$video.title}" target="_blank">{$video.title|get_replace_html=0,14}</a><strong class="type"><if condition="$video.serial gt 0">更新至{$video.serial}集<else/><notempty name='video.intro'>{$video.intro}<else />高清</notempty></if></strong></p><span class="score">{$video.score}</span><a href="{$video.readurl}" title="点击查看影片信息" class="info" target="_blank">影片信息</a></li>
+                    </gxcms>
+                    </ol>
+				</div>
+				<div id="List_rebo_1" style="display:none;">
+					<ol class="ranklist">
+                    <gxcms name="video" cid="2" limit="10" order="dayhits desc">
+						<lt name="i" value="4"><li class="top"><else /><li></eq></lt><em><eq name="i" value="10">{$i}<else/>0{$i}</eq></em><p><a href="{$video.readurl}" title="{$video.title}" target="_blank">{$video.title|get_replace_html=0,10}</a><strong class="type"><if condition="$video.serial gt 0">更新至{$video.serial}集<else/><notempty name='video.intro'>{$video.intro}<else />高清</notempty></if></strong></p><span class="score">{$video.score}</span><a href="{$video.readurl}" title="点击查看影片信息" class="info" target="_blank">影片信息</a></li>
+                    </gxcms>
+                    </ol>
+				</div>
+				<div id="List_rebo_2" style="display:none;">
+					<ol class="ranklist">
+                    <gxcms name="video" cid="3" limit="10" order="dayhits desc">
+						<lt name="i" value="4"><li class="top"><else /><li></eq></lt><em><eq name="i" value="10">{$i}<else/>0{$i}</eq></em><p><a href="{$video.readurl}" title="{$video.title}" target="_blank">{$video.title|get_replace_html=0,10}</a><strong class="type"><if condition="$video.serial gt 0">更新至{$video.serial}集<else/><notempty name='video.intro'>{$video.intro}<else />高清</notempty></if></strong></p><span class="score">{$video.score}</span><a href="{$video.readurl}" title="点击查看影片信息" class="info" target="_blank">影片信息</a></li>
+                    </gxcms>
+                    </ol>
+				</div>
+				<div id="List_rebo_3" style="display:none;">
+					<ol class="ranklist">
+                    <gxcms name="video" cid="4" limit="10" order="dayhits desc">
+						<lt name="i" value="4"><li class="top"><else /><li></eq></lt><em><eq name="i" value="10">{$i}<else/>0{$i}</eq></em><p><a href="{$video.readurl}" title="{$video.title}" target="_blank">{$video.title|get_replace_html=0,10}</a><strong class="type"><if condition="$video.serial gt 0">{$video.serial}期<else/><notempty name='video.intro'>{$video.intro}<else />高清</notempty></if></strong></p><span class="score">{$video.score}</span><a href="{$video.readurl}" title="点击查看影片信息" class="info" target="_blank">影片信息</a></li>
+                    </gxcms>
+                    </ol>
+				</div>
+			</div>
+		</div>
+	</div>
+<include file="footer" />
+<script type="text/javascript" src="{$webpath}js/page.js"></script>
+<script type="text/javascript" src="{$webpath}js/exm.js"></script>
+{$inserthits}
+</body>
+</html>

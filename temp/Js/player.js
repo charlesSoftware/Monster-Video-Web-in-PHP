@@ -1,0 +1,1 @@
+var player_width=480;var player_height=853;var player_down="http://dl.client.com/baiduPlayer/un/BaiduPlayer_78062058.exe";var player_buffer="http://union.gxcms.com/app/buffer.html";var player_time="8";var player_pause="";

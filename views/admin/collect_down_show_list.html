@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>影片下载地址采集管理</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript" charset="utf-8" type="text/javascript" src="./views/js/jquery.js"></script>
+<link rel='stylesheet' type='text/css' href='./views/css/admin_style.css'>
+<script language="JavaScript">
+$(document).ready(function(){	
+	$('#xmllist').html($('#xml').html());
+	$('#xml').html('');
+});
+var jumpurl = '{$jumpurl}';
+</script>
+</head>
+<body>
+<table width="98%" border="0" cellpadding="5" cellspacing="1" class="table">
+<tr class="table_title">
+<td colspan="7">下载资源库列表</td>
+</tr>
+<tr class="tr">
+<td>01、</td>
+<td><a href="?s=Admin/DownCollect/Co/fid/1/day/0">下载资源采集节点一</a></td>
+<td class="ct"><a href="?s=Admin/DownCollect/ColRun/action/real/type/all/fid/1/day/1/stime/3">采集当天</a></td>
+<td class="ct"><a href="?s=Admin/DownCollect/ColRun/action/real/type/all/fid/1/day/7/stime/3">采集本周</a></td>
+<td class="ct"><a href="?s=Admin/DownCollect/ColRun/action/real/type/all/fid/1/day/0/stime/3">采集所有</a></td>
+<td class="ct"><a href="?s=Admin/DownCollect/Co/fid/1/day/0/durl/0" title="尚未采集的影片">无下载资源影片</a></td>
+</tr>
+</table>
+<include file="footer" />
+<span id="xml"></span>
+</body>
+</html>

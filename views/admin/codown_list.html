@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>添加资源地址</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel='stylesheet' type='text/css' href='./views/css/admin_style.css'>
+<script language="JavaScript" charset="utf-8" type="text/javascript" src="./views/js/jquery.js"></script>
+</head>
+<body>
+<table width="98%" border="0" cellpadding="5" cellspacing="1" class="table" style="margin-bottom:5px">
+<tr class="table_title"><td><span style="float:left">本视频《{$title}》已添加资源</span><span style="float:left;margin-left:200px;">【<a href="?s=Admin/Video/Showcodown/id/{.id}/add/2" target="downurl">移除</a>】</span></td></tr>
+<tr class="tr"><td><iframe src="?s=Admin/Video/Showcodown/id/{.id}" scrolling="auto" topmargin="0" width="100%" height="200" marginwidth="0" marginheight="0" frameborder="0" align="center" name="downurl" id="downurl"></iframe></td></tr>
+</table>
+<table width="98%" border="0" cellpadding="5" cellspacing="1" class="table">
+<form action="?s=Admin/CustomCollectDown/ColNid/action/real/nid/{$nid}/title/{$title}/id/{.id}" method="post" name="gxform" id="gxform">  
+<tr class="table_title"><td colspan="8"><span style="float:left">你可以选择以下资源到以上视频</span><span style="float:left;margin-left:200px;">【<a href="?s=Admin/Video/Add/id/{.id}">返回视频编辑页</a>】</span><span style="float:right">搜索资源：&nbsp;&nbsp;<input name="keyword" type="text" id="keyword" size="20" value="{$keyword|htmlspecialchars}">&nbsp;&nbsp;<input type="submit" value="搜 索" class="bginput" title="输入关键字搜索资源"/></span></td></tr>  
+<tr class="ct list_head">
+<td width="90">编号</td>
+<td width="946">资源名称</td>
+<td width="90">操作</td>
+</tr>
+<volist name="list_video" id="gxcms">
+<tr class="tr ct">
+<td class='ct'>{$nid}_{$i}</td>
+<td class="lt"><a href="{$gxcms['url']}" target="_blank">{$gxcms['title']}</a></td>
+<td ><a href="?s=Admin/CustomCollectDown/Showcodown/action/real/nid/{$nid}/id/{.id}/add/1/key/{$gxcms['url']|str_replace='/','@',###}" target="downurl">采集并添加</a></td>
+</volist>
+</form>
+</table>
+<include file="footer" />
+</body>
+</html>

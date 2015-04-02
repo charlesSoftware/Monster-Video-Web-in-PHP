@@ -1,0 +1,57 @@
+/*
+	Document:top10.css
+*/
+
+/*reset 重置*/
+html, body, div, span,applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
+div {text-align:left;}
+h1, h2, h3, h4, h5, h6{font-size:100%;}
+address, cite, em{font-style:normal;}
+li{list-style-type:none;}
+fieldset, img {border:0;}
+label,button{cursor: pointer;}
+select,input,textarea{font-size:12px;line-height:1.2em;}
+/*reset 重置文字*/
+body{height:100%;background:#fff;font:12px/1.5em "\5b8b\4f53","Arial Narrow";color:#909090;-webkit-text-size-adjust:none;}
+a{text-decoration:none;color:#424242;}
+a:hover{color:#08a3dc;text-decoration:underline;}
+/*layer 布局*/
+.wrapper {width:970px;margin:0 auto;}
+.R710L250 .main {float:right;width:710px;}
+.R710L250 .side {float:left;width:250px;}
+.mainnav {width:968px !important;}
+.alignC {text-align:center !important;}
+.header,.mainnav_site_box {width:970px !important;}
+.navigation {margin:10px 0;}
+.on:hover {text-decoration:none !important;}
+.star,.noresult .p_1 a,.noresult_search button,.historylist li,.operbox a,.operbox .on,tagtigger span,.box_tag .act,.submenu .on,.info,.reusltbox_links_playlink .download b,.reusltbox_links_playlink .play b,.searchtag dd a,.list-pager a,.list-pager span,.list-pager strong,.order a span,.list_top .top em,.box_tt {background:url(images/sprite_list.png) no-repeat 0 0;}
+/*box*/
+.box {margin-bottom:10px;border:solid #ddd 1px;overflow:hidden;zoom:1;}
+.box_tt {height:31px;background-repeat:repeat-x;line-height:31px;border-bottom:solid #ddd 1px;}
+.box_tt h2 {float:left;font-size:14px;color:#414141;text-indent:15px;}
+.box_tt_tab strong {float:left;display:inline;padding:0 20px 0 10px;font-size:12px;color:#5d5d5d;border-right:solid #ddd 1px;}
+.box_tt_tab h3 {float:left;height:32px;padding:0 15px;font-size:14px;color:#414141;font-weight:normal;text-align:center;border-right:solid #ddd 1px;cursor:pointer;}
+.box_tt_tab .on {background:#fff;font-weight:bold;}
+.count{margin-left:10px;float:left;display:block;}
+.more{float:right;margin-right:10px;}
+.order {float:right;display:inline;margin-right:10px;}
+.order a {font-size:14px;margin-left:5px;}
+.order a:hover {text-decoration:none;}
+.order a span {background-position:-507px -38px;padding-left:15px;}
+.order a .order_b {background-position:-507px -59px;}
+.order .on {background:none;color:#08a3dc;font-weight:normal;}
+.order .on .order_a,.order a:hover .order_a {background-position:-507px -80px;}
+.order .on .order_b,.order a:hover .order_b {background-position:-507px -101px;}
+.box_con {overflow:hidden;zoom:1;padding:10px 0;}
+.box_con ul li{float:left;margin:5px 0 5px 20px;width:115px;overflow:hidden;border-bottom:1px dotted #eaeaea;}
+.box_con .new_li{clear:both;width:100%;}
+.new_li span{display:block;margin-right:10px;float:left;}
+.new_li .name{width:60px;}
+
+
+/*tabbox*/
+.footer {width:970px;height:50px;margin:0 auto;padding-top:15px;margin-top:20px;border-top:solid #eaeaea 1px;text-align:center;clear:both;}
+.footer a {color:#898888;}
+.footer .f-nav {width:930px;height:20px;text-align:center;color:#C9C9C9;}
+.footer .f-nav a {margin:0 8px;color:#333;}
+.footer .copyright {width:930px;height:44px;font-family:"Arial";line-height:22px; text-align:center;color:#666;}
