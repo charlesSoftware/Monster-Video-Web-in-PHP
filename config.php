@@ -16,9 +16,9 @@ return array (
   'web_description' => 'Welcome to Monster for building a big video website',
   'web_email' => 'XXXXXXXX',
   'web_qq' => 'XXXXXXXX',
-  'web_copyright' => '本网站提供的最新电视剧和电影资源均系收集于各大视频网站，本网站只提供web页面服务，并不提供影片资源存储，也不参与录制、上传。',
+  'web_copyright' => 'This copy right belong to Monster',
   'web_tongji' => '<script language="javascript" type="text/javascript" src="http://js.users.51.la/4469310.js"></script>',
-  'web_icp' => '粤ICP备10038673号',
+  'web_icp' => '123456789',
   'web_adsensepath' => 'temp/Banner',
   'web_admin_pagenum' => 20,
   'web_home_pagenum' => '5',
@@ -30,8 +30,8 @@ return array (
   'web_collect_num' => 3,
   'web_admin_edittime' => true,
   'web_admin_ordertype' => 'addtime',
-  'web_admin_language' => '国语,粤语,英语,韩语,日语,法语,中文字幕,英文字幕',
-  'web_admin_area' => '中国,内地,香港,台湾,韩国,日本,美国,英国,法国,意大利,德国,西班牙,泰国',
+  'web_admin_language' => 'Chinese,English,Kearon',
+  'web_admin_area' => 'China,USA,Kearo',
   'web_admin_nav' => 
   array (
     '网站信息配置' => '?s=Admin/Config/Conf/id/web',
